@@ -1,0 +1,66 @@
+section .data
+msg1 db "the source block is:",0ah,0dh
+len1: equ $-msg1
+msg2 db "the destination block is:",0ah,0dh
+len2: equ $-msg2
+
+arr1 db "se computer",0ah
+len: equ $-arr1
+
+section .bss
+arr2: resb len
+
+%macro disp 2
+mov rax,01
+mov rdi,01
+mov rsi,%1
+mov rdx,%2
+syscall
+%endmacro
+
+section .text
+global _start
+_start:
+
+
+mov rsi,arr1
+mov rdi,arr2
+mov rcx,len
+
+;xor al,al ;without using movsb
+;up: ; copy the string character by character to the destination
+;mov al,[rsi]
+;mov [rdi],al
+;inc rsi
+;inc rdi
+;dec rcx
+;jnz up
+
+
+cld
+rep movsb
+
+;comment need to be removed for movsb
+;copy entire string at a time to destination
+
+disp msg1,len1
+disp arr1,len
+disp msg2,len2
+disp arr2,len
+
+mov rax,3ch
+mov rdi,00
+syscall
+
+
+Command Lines:
+nasm -f elf64 block1.asm
+ld -o block1 block1.o
+./block1
+
+Output: Fedora using nasm software
+
+the source block is:
+se computer
+the destination block is:
+se computer
