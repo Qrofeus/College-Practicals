@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SDL Practicals</string>
+    <string name="skill_development_lab">Skill Development Lab</string>
+    <string name="audio_player">Audio Player</string>
+    <string name="store_data">Store Data</string>
+    <string name="gps_location">GPS Location</string>
+    <string name="dmitri_text"><![CDATA[Dmitri Shostakovich - Moderato & AllegroConBrio]]></string>
+    <string name="albumArt">AlbumArt</string>
+    <string name="student_details">Student Details</string>
+    <string name="name">Name :</string>
+    <string name="applicant_name">Applicant Name</string>
+    <string name="college">College :</string>
+    <string name="college_name">College Name</string>
+    <string name="contact_details">Contact Details :</string>
+    <string name="phone">Phone</string>
+    <string name="mail_id">Mail ID</string>
+    <string name="submit_entry">Submit Entry</string>
+    <string name="show_previous_entries">Show Previous Entries</string>
+
+    <string name="map_key" translatable="false">AIzaSyB_qsP8AOP_P0MdlPz-48TDaJYjTP3vbjo</string>
+</resources>
